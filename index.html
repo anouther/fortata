@@ -1,0 +1,75 @@
+<html>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js">
+</script>
+  <link href="style.css" rel="stylesheet" type="text/css" /><script src="script.js"></script>
+<body>
+<style>body{background-image: url("bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Balsamiq Sans', cursive; animation:none;transition:all .3s ease;}</style>
+
+<div id="konten"><div id="foto"><div class="image"><img id="photo" src="love.gif" width="200px" height="200px"/></div><span id="sp2"></span></div>
+
+<div id='slider'>
+  <p>hai, &nbsp;<b id="kamu"></b> cantik, lagi apa?</p>
+  <p>masih stress sama tugas kamu? aku izin ganggu kamu sebentar ya</p>
+  <p>aku cuma mau kasi support yang banyak aja, buat semangatin si cantik yang lagi sibuk nugas ini</p>
+  <p>no matter how hard school can get, you must keep going to chase your dream</p>
+  <p>jangan terlalu diforsir juga harus inget sama kesehatan kamu. kalau dirasa udah capek, jangan lupa istirahat 10/20 menit baru di lanjutin lagi</p>
+  <p>tata tolong jangan ngerasa sendirian ya, karna ada aku disini yang siap 24/7 dengerin keluh kesah dan cerita kamu</p>
+    <p>kalau ada yang ngeselin bikin kamu sedih kesel atau bahkan seneng jangan ragu buat cerita ke aku</p>
+      <p>karena aku ga akan pernah bosen denger cerita kamu, malah ngerasa lucu liat kamu antusias cerita</p>
+      <p>dalam pikiran aku "wah kacau ni orang, lucu banget pas cerita bikin sayang aja"</p>
+      <p>terus kalo ada tugas yang kamu gabisa tanya sama aku, bakal aku usahain buat bantu. tapi kalo kita sama sama gabisa, kita cari tau bareng ya pasti ada solusinya</p>
+      <p>aku jga pasti bakal berusaha bikin mood kamu selalu bagus dikala tugas kamu banyak.</p>
+  <p>i'm here for you, apapun kondisi nya aku tetep disini buat kamu, Coba pencet LOVE ini<label class='lovein' onClick="duar()">&#128158;</label></p>
+</div><div id="contTom"><a class='button whatsapp' onClick='bukaWa();'><i class='icon whatsapp'></i>Kirim</a></div>
+</div>
+<div id="bodyblur"></div>
+
+<script>  
+var a=0,finish;
+finish = "good job buat sicantik yang pasti udah nyelesain beberapa tugas sekolahnya! tau ga aku tuh jadi ngerasa bangga karna kamu masih semangat ngejar pendidikan menski aga diasingin sama temen-temen sekelasmu. tapi ya ta menurutku mungkin mereka sebenernya mau kenal kamu tapi insecure takut kalah cantik wkwk, jadi coba kumpulin keberanian kamu buat nyapa mereka duluan siapa tau mereka jadi lebih akrab sama kamu. btw maaf aku cuma bisa bantu tugas ini, kasih tau aku nanti ya gimana pendapat kamu soal hasil dari gambar aku. semoga aku bisa bikin nilai kamu memuaskan jadi kamu bakal senyum terus. karna kebahagiaan kamu itu bisa nular ke aku";
+
+function play() {
+  var audio = new Audio('kisah.mp3');
+  audio.play();
+}
+            
+ function bukaWa(){window.location = "https://drive.google.com/folderview?id=1ihtT6uYAtmCYCPFEhg0SkdIiyIlO0Mn1"}
+</script>
+ 
+<script type="text/javascript">            
+            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+            const swals = Swal.mixin({
+                allowOutsideClick: false,
+            });
+            async function mulai(){
+                var { value: nama } = await swals.fire({
+                    title: 'Masukin nama kamu!',
+                    input: 'text',
+                    confirmButtonText: 'next',
+                    showCancelButton: false,
+                });                           
+                if(nama){
+                	window.nama = nama;
+                    finish = finish + ", " + nama + "!";    
+                    document.getElementById("kamu").innerHTML = "" + window.nama;
+                    setTimeout(showDiv, 700);play();                      
+                } else {
+                    await swals.fire('Heh! Jangan dikosongin atuh namanya buru isi 😡');
+                    mulai();
+                }
+            }
+            mulai();
+</script>
+</body>
+</html>
