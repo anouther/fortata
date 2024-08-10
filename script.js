@@ -5,6 +5,6 @@ function duar(){
 document.getElementById('bodyblur').style.opacity = "1";document.getElementById('bodyblur').style.visibility = "visible";
 document.getElementById('foto').style.opacity = "1";document.getElementById('foto').style.height = "250px";
 document.getElementById('slider').style.display = "none";
-if(a<finish.length){document.getElementById("sp2").innerHTML += finish.charAt(a);a++;setTimeout(duar,50);}
-if(a==finish.length){setTimeout(tombol,500);}
+if(a<finish.length){document.getElementById("sp2").innerHTML += finish.charAt(a);a++;setTimeout(duar,30);}
+if(a==finish.length){setTimeout(tombol,400);}
    }
